@@ -1,358 +1,289 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<title>NexoraVault | Tienda Digital Automatizada</title>
+  <title>NexoraVault | Tienda Digital Automatizada</title>
+  <meta name="description" content="NexoraVault es una tienda digital automatizada especializada en tarjetas regalo, saldo y productos digitales con una experiencia rápida, moderna y profesional." />
+  <meta name="keywords" content="gift cards, tarjetas regalo, psn, xbox, valorant, repsol, nike, adidas, tienda digital, nexoravault" />
+  <meta name="author" content="NexoraVault" />
 
-<meta name="description" content="NexoraVault es una tienda digital automatizada especializada en tarjetas regalo y productos digitales con entrega rápida y segura.">
+  <meta property="og:title" content="NexoraVault | Tienda Digital Automatizada" />
+  <meta property="og:description" content="Plataforma digital especializada en tarjetas regalo, saldo y productos digitales." />
+  <meta property="og:image" content="https://cdn.discordapp.com/attachments/1478152738004140136/1482399095808196749/BB1FD342-29DA-4EA6-A574-BCD628698F82.png" />
+  <meta property="og:type" content="website" />
 
-<style>
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
-
-body{
-font-family:Arial, Helvetica, sans-serif;
-background:
-radial-gradient(circle at top, rgba(80,120,255,0.25), transparent 40%),
-linear-gradient(180deg,#050816,#0b1435,#050816);
-color:white;
-line-height:1.6;
-}
-
-.container{
-width:90%;
-max-width:1200px;
-margin:auto;
-}
-
-.hero{
-text-align:center;
-padding:80px 0 50px;
-}
-
-.logo{
-width:120px;
-border-radius:20px;
-box-shadow:0 0 40px rgba(0,140,255,0.4);
-margin-bottom:20px;
-}
-
-.hero h1{
-font-size:60px;
-font-weight:800;
-background:linear-gradient(90deg,#ffffff,#7cb6ff,#ffffff);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-margin-bottom:10px;
-}
-
-.subtitle{
-font-size:22px;
-color:#b8c7ff;
-margin-bottom:25px;
-}
-
-.hero-buttons{
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-margin-bottom:30px;
-}
-
-.btn{
-padding:15px 28px;
-border-radius:10px;
-font-weight:bold;
-transition:0.2s;
-}
-
-.btn-primary{
-background:#2f6bff;
-color:white;
-box-shadow:0 0 20px rgba(47,107,255,0.4);
-}
-
-.btn-primary:hover{
-background:#1a4bd6;
-transform:translateY(-2px);
-}
-
-.btn-secondary{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.2);
-color:white;
-}
-
-.btn-secondary:hover{
-background:rgba(255,255,255,0.1);
-}
-
-.banner{
-width:100%;
-max-width:1000px;
-border-radius:20px;
-box-shadow:0 0 40px rgba(0,120,255,0.3);
-margin:auto;
-}
-
-.section{
-padding:70px 0;
-}
-
-.section-title{
-text-align:center;
-font-size:36px;
-margin-bottom:10px;
-}
-
-.section-text{
-text-align:center;
-max-width:700px;
-margin:0 auto 40px;
-color:#d0dbff;
-}
-
-.products{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
-gap:20px;
-}
-
-.card{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
-padding:25px;
-border-radius:15px;
-text-align:center;
-transition:0.2s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-box-shadow:0 0 20px rgba(0,120,255,0.25);
-}
-
-.card strong{
-display:block;
-font-size:18px;
-margin-bottom:5px;
-}
-
-.payments{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
-gap:20px;
-}
-
-.payment{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
-padding:20px;
-border-radius:15px;
-text-align:center;
-}
-
-.launch-box{
-background:rgba(255,255,255,0.05);
-border:1px solid rgba(255,255,255,0.1);
-border-radius:20px;
-padding:35px;
-text-align:center;
-max-width:600px;
-margin:auto;
-}
-
-.launch-date{
-font-size:30px;
-font-weight:800;
-margin-top:10px;
-}
-
-footer{
-text-align:center;
-padding:40px;
-color:#9ca9ff;
-border-top:1px solid rgba(255,255,255,0.1);
-margin-top:60px;
-}
-
-</style>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
 
-<section class="hero">
-<div class="container">
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <img src="https://cdn.discordapp.com/attachments/1478152738004140136/1482399114552414208/D96A909B-DC0B-4A55-929B-0E3844B4CC69.png" alt="Logo NexoraVault" class="brand-logo">
+        <span class="brand-name">NexoraVault</span>
+      </div>
 
-<img src="https://cdn.discordapp.com/attachments/1478152738004140136/1482399114552414208/D96A909B-DC0B-4A55-929B-0E3844B4CC69.png" class="logo">
+      <nav class="nav-links">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#como-funciona">Cómo funciona</a>
+        <a href="#pagos">Pagos</a>
+        <a href="#faq">FAQ</a>
+      </nav>
 
-<h1>NexoraVault</h1>
+      <a class="nav-cta" href="https://discord.gg/6MbayvyV2s" target="_blank" rel="noopener noreferrer">Comunidad</a>
+    </div>
+  </header>
 
-<p class="subtitle">
-Automated Digital Store
-</p>
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <div class="hero-badge">PRE-LANZAMIENTO • INFRAESTRUCTURA EN PREPARACIÓN</div>
 
-<div class="hero-buttons">
+          <h1>La nueva generación de tienda digital automatizada</h1>
 
-<a class="btn btn-primary" href="#catalogo">
-Ver catálogo
-</a>
+          <p class="hero-text">
+            NexoraVault está siendo construido para ofrecer una experiencia seria, rápida y moderna en tarjetas regalo, saldo digital y productos online.
+          </p>
 
-<a class="btn btn-secondary" href="https://discord.gg/6MbayvyV2s" target="_blank">
-Entrar a la comunidad
-</a>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#catalogo">Explorar catálogo</a>
+            <a class="btn btn-secondary" href="https://discord.gg/6MbayvyV2s" target="_blank" rel="noopener noreferrer">Entrar a la comunidad</a>
+          </div>
 
-</div>
+          <div class="hero-trust">
+            <span>⚡ Flujo digital optimizado</span>
+            <span>🔒 Entorno estructurado</span>
+            <span>💳 Múltiples métodos de pago</span>
+          </div>
+        </div>
 
-<img src="https://cdn.discordapp.com/attachments/1478152738004140136/1482399095808196749/BB1FD342-29DA-4EA6-A574-BCD628698F82.png" class="banner">
+        <div class="hero-visual">
+          <img
+            src="https://cdn.discordapp.com/attachments/1478152738004140136/1482399095808196749/BB1FD342-29DA-4EA6-A574-BCD628698F82.png"
+            alt="Banner NexoraVault"
+            class="hero-banner"
+          />
+        </div>
+      </div>
+    </section>
 
-</div>
-</section>
+    <section class="stats">
+      <div class="container stats-grid">
+        <div class="stat-card">
+          <strong>Digital Store</strong>
+          <span>Modelo enfocado en automatización y escalabilidad</span>
+        </div>
+        <div class="stat-card">
+          <strong>Catálogo inicial</strong>
+          <span>Gaming, retail y saldo digital</span>
+        </div>
+        <div class="stat-card">
+          <strong>Comunidad</strong>
+          <span>Discord como núcleo social y de soporte</span>
+        </div>
+      </div>
+    </section>
 
+    <section class="section" id="catalogo">
+      <div class="container">
+        <div class="section-head">
+          <h2>Catálogo inicial</h2>
+          <p>
+            NexoraVault está orientado a operar con productos digitales de alta demanda dentro del entorno gaming y retail.
+          </p>
+        </div>
 
-<section class="section" id="catalogo">
+        <div class="catalog-grid">
+          <article class="catalog-card">
+            <h3>PlayStation</h3>
+            <p>Tarjetas PSN y saldo digital.</p>
+          </article>
 
-<div class="container">
+          <article class="catalog-card">
+            <h3>Xbox</h3>
+            <p>Gift cards y saldo compatible.</p>
+          </article>
 
-<h2 class="section-title">
-Catálogo digital
-</h2>
+          <article class="catalog-card">
+            <h3>Valorant</h3>
+            <p>Points y contenido digital.</p>
+          </article>
 
-<p class="section-text">
-NexoraVault ofrecerá tarjetas regalo y saldo digital para las plataformas más populares.
-</p>
+          <article class="catalog-card">
+            <h3>Google Play</h3>
+            <p>Tarjetas regalo y saldo.</p>
+          </article>
 
-<div class="products">
+          <article class="catalog-card">
+            <h3>Repsol</h3>
+            <p>Tarjetas y saldo compatible.</p>
+          </article>
 
-<div class="card">
-<strong>PlayStation</strong>
-PSN Cards
-</div>
+          <article class="catalog-card">
+            <h3>Nike / Adidas</h3>
+            <p>Gift cards para retail digital.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<div class="card">
-<strong>Xbox</strong>
-Xbox Gift Cards
-</div>
+    <section class="section alt" id="como-funciona">
+      <div class="container">
+        <div class="section-head">
+          <h2>Cómo funciona</h2>
+          <p>
+            La estructura de NexoraVault está diseñada para que la experiencia de compra sea clara, profesional y preparada para automatización.
+          </p>
+        </div>
 
-<div class="card">
-<strong>Valorant</strong>
-Valorant Points
-</div>
+        <div class="steps-grid">
+          <article class="step-card">
+            <div class="step-number">01</div>
+            <h3>Selecciona tu producto</h3>
+            <p>Explora el catálogo inicial y elige la tarjeta o producto digital que necesitas.</p>
+          </article>
 
-<div class="card">
-<strong>Google Play</strong>
-Gift Cards
-</div>
+          <article class="step-card">
+            <div class="step-number">02</div>
+            <h3>Elige tu método de pago</h3>
+            <p>La plataforma está orientada a operar con métodos modernos, seguros y reconocidos.</p>
+          </article>
 
-<div class="card">
-<strong>Repsol</strong>
-Tarjetas saldo
-</div>
+          <article class="step-card">
+            <div class="step-number">03</div>
+            <h3>Procesamiento del pedido</h3>
+            <p>El sistema organiza internamente el flujo de compra para mantener una operación clara y profesional.</p>
+          </article>
 
-<div class="card">
-<strong>Nike / Adidas</strong>
-Gift Cards
-</div>
+          <article class="step-card">
+            <div class="step-number">04</div>
+            <h3>Entrega digital</h3>
+            <p>Una vez validado el pedido, el producto se entrega dentro del flujo operativo previsto.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-</div>
+    <section class="section" id="pagos">
+      <div class="container">
+        <div class="section-head">
+          <h2>Métodos de pago</h2>
+          <p>
+            NexoraVault está pensado para ofrecer una experiencia de pago moderna, flexible y alineada con plataformas digitales profesionales.
+          </p>
+        </div>
 
-</div>
+        <div class="payments-grid">
+          <article class="payment-card">
+            <h3>💳 Tarjeta crédito / débito</h3>
+            <p>Visa, Mastercard y otros métodos compatibles para pagos rápidos y directos.</p>
+          </article>
 
-</section>
+          <article class="payment-card">
+            <h3>🏦 Transferencia bancaria</h3>
+            <p>Opción tradicional para operaciones y pagos bancarios directos.</p>
+          </article>
 
+          <article class="payment-card">
+            <h3>💰 PayPal</h3>
+            <p>Solución muy extendida para pagos online ágiles y reconocidos.</p>
+          </article>
 
-<section class="section">
+          <article class="payment-card">
+            <h3>📱 Apple Pay / Google Pay</h3>
+            <p>Pagos móviles cómodos y modernos para dispositivos compatibles.</p>
+          </article>
 
-<div class="container">
+          <article class="payment-card">
+            <h3>₿ Criptomonedas</h3>
+            <p>Alternativa digital orientada a usuarios que prefieren activos digitales.</p>
+          </article>
 
-<h2 class="section-title">
-Métodos de pago
-</h2>
+          <article class="payment-card">
+            <h3>🎮 Prepago / Paysafecard</h3>
+            <p>Método especialmente reconocido dentro del entorno gaming.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<p class="section-text">
-La plataforma está preparada para ofrecer múltiples métodos de pago seguros.
-</p>
+    <section class="section alt" id="lanzamiento">
+      <div class="container">
+        <div class="launch-box">
+          <div class="launch-tag">ESTADO DEL PROYECTO</div>
+          <h2>Pre-lanzamiento activo</h2>
+          <p>
+            NexoraVault se encuentra en fase final de preparación, validación de sistemas y estructura operativa.
+          </p>
+          <div class="launch-date">15 de abril de 2026</div>
+          <div class="countdown" id="countdown">Cargando cuenta atrás...</div>
 
-<div class="payments">
+          <div class="launch-actions">
+            <a class="btn btn-primary" href="https://discord.gg/6MbayvyV2s" target="_blank" rel="noopener noreferrer">Unirse al Discord</a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-<div class="payment">
-💳 Tarjeta crédito / débito
-</div>
+    <section class="section" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>Preguntas frecuentes</h2>
+          <p>
+            Información clave sobre el proyecto, su funcionamiento y su fase actual.
+          </p>
+        </div>
 
-<div class="payment">
-🏦 Transferencia bancaria
-</div>
+        <div class="faq-list">
+          <article class="faq-item">
+            <h3>¿NexoraVault ya está abierto?</h3>
+            <p>No. El proyecto se encuentra en fase de pre-lanzamiento y preparación operativa.</p>
+          </article>
 
-<div class="payment">
-💰 PayPal
-</div>
+          <article class="faq-item">
+            <h3>¿Qué productos estarán disponibles?</h3>
+            <p>Inicialmente se trabajará con tarjetas regalo y saldo digital orientado a gaming y retail.</p>
+          </article>
 
-<div class="payment">
-📱 Apple Pay / Google Pay
-</div>
+          <article class="faq-item">
+            <h3>¿Qué papel tendrá Discord?</h3>
+            <p>Discord funcionará como comunidad, soporte, anuncios y núcleo social del proyecto.</p>
+          </article>
 
-<div class="payment">
-₿ Criptomonedas
-</div>
+          <article class="faq-item">
+            <h3>¿La tienda será automatizada?</h3>
+            <p>Sí. La visión del proyecto está centrada en automatización, estructura y escalabilidad.</p>
+          </article>
+        </div>
+      </div>
+    </section>
 
-<div class="payment">
-🎮 Paysafecard
-</div>
+    <section class="section final-cta">
+      <div class="container final-cta-box">
+        <h2>Únete al inicio de NexoraVault</h2>
+        <p>
+          Forma parte de la comunidad antes del lanzamiento oficial y sigue la evolución del proyecto desde dentro.
+        </p>
+        <a class="btn btn-primary" href="https://discord.gg/6MbayvyV2s" target="_blank" rel="noopener noreferrer">Entrar a la comunidad</a>
+      </div>
+    </section>
+  </main>
 
-</div>
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>NexoraVault</strong>
+        <p>Plataforma digital en desarrollo</p>
+      </div>
+      <div>
+        <span>© 2026 NexoraVault</span>
+      </div>
+    </div>
+  </footer>
 
-</div>
-
-</section>
-
-
-<section class="section">
-
-<div class="container">
-
-<h2 class="section-title">
-Pre-lanzamiento
-</h2>
-
-<div class="launch-box">
-
-<p>
-NexoraVault se encuentra actualmente en fase de preparación.
-</p>
-
-<p>
-La apertura oficial está prevista para:
-</p>
-
-<div class="launch-date">
-15 de abril de 2026
-</div>
-
-<br>
-
-<a class="btn btn-primary" href="https://discord.gg/6MbayvyV2s" target="_blank">
-Unirse al Discord
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<footer>
-
-© 2026 NexoraVault
-
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
