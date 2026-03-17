@@ -4,115 +4,124 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NexoraVault | Catálogo</title>
-  <meta name="description" content="Catálogo digital de NexoraVault con tarjetas regalo, saldo y productos online.">
+  <meta name="description" content="Explora el catálogo de NexoraVault con tarjetas regalo y productos digitales.">
   <link rel="icon" href="/assets/logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
 
 <header class="site-header">
   <div class="container nav">
     <a class="brand" href="index.html">
-      <img src="/assets/logo.png" alt="Logo NexoraVault">
+      <img src="/assets/logo.png">
       <span>NexoraVault</span>
     </a>
 
-    <nav class="nav-links">
-      <a href="index.html">Inicio</a>
-      <a href="catalogo.html">Catálogo</a>
-      <a href="faq.html">FAQ</a>
-      <a href="terminos.html">Términos</a>
-      <a href="contacto.html">Contacto</a>
-    </nav>
-
-    <a class="nav-cta" href="https://discord.gg/6MbayvyV2s" target="_blank" rel="noopener noreferrer">Comunidad</a>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
   </div>
 </header>
 
+<div class="side-menu" id="sideMenu">
+  <a href="index.html">Inicio</a>
+  <a href="catalogo.html">Catálogo</a>
+  <a href="faq.html">FAQ</a>
+  <a href="terminos.html">Términos</a>
+  <a href="contacto.html">Contacto</a>
+
+  <a class="menu-discord" href="https://discord.gg/6MbayvyV2s" target="_blank">
+    Comunidad
+  </a>
+</div>
+
 <main>
-  <section class="section">
-    <div class="container">
-      <div class="section-head">
-        <h2>Catálogo inicial</h2>
-        <p>
-          Una selección inicial de productos digitales organizada para transmitir claridad y facilitar futuras ampliaciones del catálogo.
-        </p>
-      </div>
 
-      <div class="grid-3">
-        <article class="card product-card">
-          <div class="tag">PlayStation</div>
-          <h3>PSN 10€</h3>
-          <p>Tarjeta regalo PlayStation orientada a compras y saldo digital.</p>
-          <div class="price">10€</div>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="psn.html">Ver producto</a>
-          </div>
-        </article>
+<section class="section">
+  <div class="container">
 
-        <article class="card product-card">
-          <div class="tag">PlayStation</div>
-          <h3>PSN 20€</h3>
-          <p>Saldo digital PlayStation con presentación clara y profesional.</p>
-          <div class="price">20€</div>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="psn.html">Ver producto</a>
-          </div>
-        </article>
-
-        <article class="card product-card">
-          <div class="tag">Xbox</div>
-          <h3>Xbox 25€</h3>
-          <p>Tarjeta regalo Xbox para compras digitales y saldo compatible.</p>
-          <div class="price">25€</div>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="xbox.html">Ver producto</a>
-          </div>
-        </article>
-
-        <article class="card product-card">
-          <div class="tag">Valorant</div>
-          <h3>Valorant 10€</h3>
-          <p>Producto digital orientado a contenido y saldo dentro del ecosistema Valorant.</p>
-          <div class="price">10€</div>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="valorant.html">Ver producto</a>
-          </div>
-        </article>
-
-        <article class="card product-card">
-          <div class="tag">Google Play</div>
-          <h3>Google Play 15€</h3>
-          <p>Tarjeta regalo para saldo y consumo digital dentro de Google Play.</p>
-          <div class="price">15€</div>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="google-play.html">Ver producto</a>
-          </div>
-        </article>
-
-        <article class="card product-card">
-          <div class="tag">Repsol</div>
-          <h3>Repsol 20€</h3>
-          <p>Producto orientado a combustible y saldo compatible con la marca.</p>
-          <div class="price">20€</div>
-          <div class="card-actions">
-            <a class="btn btn-primary" href="repsol.html">Ver producto</a>
-          </div>
-        </article>
-      </div>
+    <div class="section-head">
+      <h2>Catálogo de productos</h2>
+      <p>
+        Selecciona una categoría para ver los productos disponibles. 
+        NexoraVault organiza su catálogo para ofrecer una experiencia clara, rápida y profesional.
+      </p>
     </div>
-  </section>
+
+    <div class="grid-3">
+
+      <!-- PSN -->
+      <div class="card product-card">
+        <img src="/assets/banner.png" style="border-radius:12px;">
+        <h3>PlayStation (PSN)</h3>
+        <p>Tarjetas regalo y saldo digital para PlayStation Store.</p>
+
+        <div class="card-actions">
+          <a class="btn btn-primary" href="psn.html">Ver productos</a>
+        </div>
+      </div>
+
+      <!-- Xbox -->
+      <div class="card product-card">
+        <img src="/assets/banner.png" style="border-radius:12px;">
+        <h3>Xbox</h3>
+        <p>Saldo y tarjetas regalo para el ecosistema Xbox.</p>
+
+        <div class="card-actions">
+          <a class="btn btn-primary" href="xbox.html">Ver productos</a>
+        </div>
+      </div>
+
+      <!-- Valorant -->
+      <div class="card product-card">
+        <img src="/assets/banner.png" style="border-radius:12px;">
+        <h3>Valorant</h3>
+        <p>Valorant Points y contenido digital.</p>
+
+        <div class="card-actions">
+          <a class="btn btn-primary" href="valorant.html">Ver productos</a>
+        </div>
+      </div>
+
+      <!-- Google Play -->
+      <div class="card product-card">
+        <img src="/assets/banner.png" style="border-radius:12px;">
+        <h3>Google Play</h3>
+        <p>Tarjetas regalo para apps, juegos y contenido digital.</p>
+
+        <div class="card-actions">
+          <a class="btn btn-primary" href="google-play.html">Ver productos</a>
+        </div>
+      </div>
+
+      <!-- Repsol -->
+      <div class="card product-card">
+        <img src="/assets/banner.png" style="border-radius:12px;">
+        <h3>Repsol</h3>
+        <p>Tarjetas para combustible y uso en estaciones.</p>
+
+        <div class="card-actions">
+          <a class="btn btn-primary" href="repsol.html">Ver productos</a>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
 </main>
 
 <footer class="footer">
   <div class="container footer-inner">
     <div>
       <strong>NexoraVault</strong>
-      <p>Catálogo digital en desarrollo</p>
+      <p>Catálogo digital</p>
     </div>
     <div>© 2026 NexoraVault</div>
   </div>
 </footer>
+
+<script src="script.js"></script>
 
 </body>
 </html>
