@@ -421,3 +421,41 @@ img{
   background:#3b82f6;
   text-align:center;
 }
+.product-desc{
+  font-size:15px;
+  opacity:0.9;
+  margin-bottom:10px;
+}
+
+.product-features{
+  list-style:none;
+  padding:0;
+  margin:10px 0;
+  font-size:14px;
+  opacity:0.85;
+}
+
+.product-features li{
+  margin-bottom:6px;
+}
+
+.price{
+  font-size:26px;
+  font-weight:800;
+  margin:12px 0;
+}
+
+.premium{
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.2s;
+}
+
+.premium:hover{
+  transform:translateY(-5px);
+  border-color:#3b82f6;
+}
+
+.highlight{
+  border:2px solid #3b82f6;
+  box-shadow:0 0 25px rgba(59,130,246,0.3);
+}
