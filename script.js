@@ -19,5 +19,10 @@ function updateCountdown() {
   countdownEl.textContent = `Faltan ${days} días, ${hours} horas y ${minutes} minutos para el lanzamiento oficial.`;
 }
 
+function toggleMenu() {
+  const menu = document.getElementById("sideMenu");
+  menu.classList.toggle("active");
+}
+
 updateCountdown();
 setInterval(updateCountdown, 60000);
