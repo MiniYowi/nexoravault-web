@@ -656,3 +656,14 @@ button {
     width: 100%;
   }
 }
+
+.page-hero-category {
+  padding: 76px 0 30px;
+}
+
+.theme-playstation {
+  background:
+    radial-gradient(circle at top right, rgba(0, 153, 255, 0.22), transparent 26%),
+    radial-gradient(circle at top left, rgba(64, 92, 255, 0.16), transparent 24%),
+    #050912;
+}
