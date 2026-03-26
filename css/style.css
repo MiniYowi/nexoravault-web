@@ -667,3 +667,63 @@ button {
     radial-gradient(circle at top left, rgba(64, 92, 255, 0.16), transparent 24%),
     #050912;
 }
+
+.xelyora-card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 20px;
+  padding: 18px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, rgba(91,140,255,0.12), rgba(138,91,255,0.12));
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.card-media img {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.product-region {
+  color: #8ef0b4;
+  font-weight: bold;
+}
+
+.product-title {
+  font-size: 1.3rem;
+  margin: 10px 0;
+}
+
+.old-price {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.current-price {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.cashback-tag {
+  margin-top: 8px;
+  color: #8ef0b4;
+}
+
+.cart-btn {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: none;
+  background: #5b8cff;
+  color: white;
+  font-weight: bold;
+}
+
+.fav-btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: white;
+}
