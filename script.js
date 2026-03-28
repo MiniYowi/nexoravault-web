@@ -1,27 +1,26 @@
-const launchDate = new Date("2026-04-15T12:00:00Z");
-const countdownEl = document.getElementById("countdown");
+<script>
+const launchDate = new Date("2026-04-15T00:00:00");
 
 function updateCountdown() {
-  if (!countdownEl) return;
-
   const now = new Date();
   const diff = launchDate - now;
 
   if (diff <= 0) {
-    countdownEl.textContent = "El lanzamiento ya está activo.";
+    document.querySelector(".countdown").innerHTML = "🔥 YA DISPONIBLE";
     return;
   }
 
-  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const m = Math.floor((diff / (1000 * 60)) % 60);
+  const s = Math.floor((diff / 1000) % 60);
 
-  countdownEl.textContent = `Faltan ${days} días, ${hours} horas y ${minutes} minutos para el lanzamiento oficial.`;
+  document.getElementById("days").textContent = d;
+  document.getElementById("hours").textContent = h;
+  document.getElementById("minutes").textContent = m;
+  document.getElementById("seconds").textContent = s;
 }
 
-function toggleMenu(){
-  document.getElementById("sideMenu").classList.toggle("active");
-}
-
+setInterval(updateCountdown, 1000);
 updateCountdown();
-setInterval(updateCountdown, 60000);
+</script>
