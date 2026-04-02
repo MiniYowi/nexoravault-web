@@ -52,9 +52,73 @@
       margin: 0 auto;
     }
 
-    .site-header {
+    /* CONTADOR PREMIUM */
+    .launch-bar {
       position: sticky;
       top: 0;
+      z-index: 9999;
+      background: linear-gradient(90deg, #0a0f1f, #141c3a);
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+    }
+
+    .launch-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      max-width: 1200px;
+      margin: auto;
+      padding: 10px 16px;
+      flex-wrap: wrap;
+    }
+
+    .launch-left {
+      font-weight: 700;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .launch-date {
+      font-weight: 700;
+      color: #fff;
+      font-size: 14px;
+    }
+
+    .countdown {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .time-box {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.10);
+      padding: 8px 10px;
+      border-radius: 12px;
+      text-align: center;
+      min-width: 62px;
+      backdrop-filter: blur(6px);
+    }
+
+    .time-box strong {
+      display: block;
+      font-size: 18px;
+      color: #ffffff;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+
+    .time-box span {
+      font-size: 10px;
+      color: #9aa4c7;
+      letter-spacing: 0.08em;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 56px;
       z-index: 20;
       backdrop-filter: blur(14px);
       background: rgba(5, 7, 12, 0.72);
@@ -409,6 +473,18 @@
       }
     }
 
+    @media (max-width: 768px) {
+      .launch-inner {
+        justify-content: center;
+        text-align: center;
+      }
+
+      .launch-left,
+      .launch-date {
+        width: 100%;
+      }
+    }
+
     @media (max-width: 760px) {
       .nav {
         display: none;
@@ -437,39 +513,38 @@
   </style>
 </head>
 <body>
-  
   <div class="launch-bar">
-  <div class="launch-inner">
-    <div class="launch-left">
-      🚀 Lanzamiento XELYORA
+    <div class="launch-inner">
+      <div class="launch-left">
+        🚀 Lanzamiento XELYORA
+      </div>
+
+      <div class="countdown">
+        <div class="time-box">
+          <strong id="days">00</strong>
+          <span>DÍAS</span>
+        </div>
+
+        <div class="time-box">
+          <strong id="hours">00</strong>
+          <span>HORAS</span>
+        </div>
+
+        <div class="time-box">
+          <strong id="minutes">00</strong>
+          <span>MIN</span>
+        </div>
+
+        <div class="time-box">
+          <strong id="seconds">00</strong>
+          <span>SEG</span>
+        </div>
+      </div>
+
+      <div class="launch-date">15 Abril</div>
     </div>
-
-    <div class="countdown">
-      <div class="time-box">
-        <strong id="days">00</strong>
-        <span>DÍAS</span>
-      </div>
-
-      <div class="time-box">
-        <strong id="hours">00</strong>
-        <span>HORAS</span>
-      </div>
-
-      <div class="time-box">
-        <strong id="minutes">00</strong>
-        <span>MIN</span>
-      </div>
-
-      <div class="time-box">
-        <strong id="seconds">00</strong>
-        <span>SEG</span>
-      </div>
-    </div>
-
-    <div class="launch-date">15 Abril</div>
   </div>
-</div>
-  
+
   <header class="site-header">
     <div class="container header-wrap">
       <a class="brand" href="/">
@@ -595,10 +670,7 @@
               <li><span>Tarjeta 100€</span><strong>92.99€</strong></li>
               <li><span>Tarjeta 125€</span><strong>120.99€</strong></li>
             </ul>
-          
-        
-         
-         </article>
+          </article>
 
           <article class="product-card spotify">
             <div>
@@ -609,8 +681,8 @@
               <p>Códigos premium y recargas para seguir escuchando sin límites.</p>
             </div>
             <ul class="price-list">
-             <li><span>6 meses individual </span><strong>120.30€</strong></li>
-           </ul>
+              <li><span>6 meses individual</span><strong>120.30€</strong></li>
+            </ul>
           </article>
 
           <article class="product-card nitro">
@@ -622,7 +694,7 @@
               <p>Suscripción premium para Discord con más funciones y mejor experiencia.</p>
             </div>
             <ul class="price-list">
-              <li><span>1 mes</span><strong>8.92€€</strong></li>
+              <li><span>1 mes</span><strong>8.92€</strong></li>
               <li><span>1 año</span><strong>92.37€</strong></li>
             </ul>
           </article>
@@ -681,5 +753,42 @@
       XELYORA · Tienda digital en preparación
     </div>
   </footer>
+
+  <script>
+    const launchDate = new Date("2026-04-15T00:00:00");
+
+    function updateCountdown() {
+      const daysEl = document.getElementById("days");
+      const hoursEl = document.getElementById("hours");
+      const minutesEl = document.getElementById("minutes");
+      const secondsEl = document.getElementById("seconds");
+
+      if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+      const now = new Date();
+      const diff = launchDate - now;
+
+      if (diff <= 0) {
+        const countdown = document.querySelector(".countdown");
+        if (countdown) {
+          countdown.innerHTML = "<div class='time-box'><strong>YA</strong><span>DISPONIBLE</span></div>";
+        }
+        return;
+      }
+
+      const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+      const m = Math.floor((diff / (1000 * 60)) % 60);
+      const s = Math.floor((diff / 1000) % 60);
+
+      daysEl.textContent = String(d).padStart(2, "0");
+      hoursEl.textContent = String(h).padStart(2, "0");
+      minutesEl.textContent = String(m).padStart(2, "0");
+      secondsEl.textContent = String(s).padStart(2, "0");
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
 </body>
 </html>
