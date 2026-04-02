@@ -53,3 +53,38 @@ document.querySelectorAll(".add-to-cart").forEach(button => {
 });
 
 updateCartCount();
+
+const launchDate = new Date("2026-04-15T00:00:00");
+
+function updateCountdown() {
+  const daysEl = document.getElementById("days");
+  const hoursEl = document.getElementById("hours");
+  const minutesEl = document.getElementById("minutes");
+  const secondsEl = document.getElementById("seconds");
+
+  if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
+
+  const now = new Date();
+  const diff = launchDate - now;
+
+  if (diff <= 0) {
+    const launchBar = document.querySelector(".launch-bar");
+    if (launchBar) {
+      launchBar.innerHTML = `<div class="launch-inner"><div class="launch-left">🔥 YA DISPONIBLE</div></div>`;
+    }
+    return;
+  }
+
+  const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const h = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const m = Math.floor((diff / (1000 * 60)) % 60);
+  const s = Math.floor((diff / 1000) % 60);
+
+  daysEl.textContent = String(d).padStart(2, "0");
+  hoursEl.textContent = String(h).padStart(2, "0");
+  minutesEl.textContent = String(m).padStart(2, "0");
+  secondsEl.textContent = String(s).padStart(2, "0");
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
