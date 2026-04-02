@@ -1006,47 +1006,48 @@ button {
   position: sticky;
   top: 0;
   z-index: 9999;
-  background: linear-gradient(90deg, #0bbfff, #7a5cff);
-  color: white;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  background: linear-gradient(90deg, #0a0f1f, #141c3a);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
 }
 
 .launch-inner {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  gap: 10px;
-  max-width: 1100px;
+  align-items: center;
+  padding: 10px 16px;
+  max-width: 1200px;
   margin: auto;
-  padding: 10px;
-  flex-wrap: wrap;
 }
 
-.launch-text {
-  font-weight: 700;
-}
-
-.launch-date {
-  font-weight: 700;
+.launch-left {
+  font-weight: 600;
+  color: #fff;
+  font-size: 14px;
 }
 
 .countdown {
   display: flex;
-  gap: 8px;
+  gap: 10px;
 }
 
-.countdown div {
-  background: rgba(255,255,255,0.15);
-  padding: 8px 10px;
+.time-box {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  padding: 6px 10px;
   border-radius: 10px;
   text-align: center;
+  min-width: 50px;
+  backdrop-filter: blur(6px);
 }
 
-.countdown strong {
+.time-box strong {
   display: block;
   font-size: 16px;
+  color: #ffffff;
 }
 
-.countdown span {
+.time-box span {
   font-size: 10px;
+  color: #9aa4c7;
 }
